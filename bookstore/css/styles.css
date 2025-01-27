@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #EDE0D4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 225px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    border-right: 5px solid #EDE0D4;
+}
+
+/*_____HEADER_____*/
+.header {
+    grid-area: header;
+    display: flex;
+    padding: 20px;
+    background: #EDE0D4;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.nav li {
+    display: inline-block;
+    margin-top: 32px;
+}
+
+.nav a {
+    padding: 10px;
+    text-decoration: none;
+    background: #F5F0E6;
+    border-radius: 5px;
+    border: 1px solid #001f3f;
+    color: #001f3f;
+}
+.nav a:hover {
+    background: #F5F0E6;
+    color: #EDE0D4;
+    border-radius: 5px;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    padding-bottom: 3px;
+}
+
+
+
+
+/*_____SIDEBAR_____*/
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #EDE0D4;
+}
+
+/*_____MAIN_____*/
+.maincontent {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #F5F0E6;
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+}
+
+
+
+
+/*_____FOOTER_____*/
+.footer {
+    grid-area: footer;
+    display: flex;
+    padding: 20px;
+    background: #EDE0D4;
+    justify-content: center;
+}
+.footer p {
+    font-size: 14px;
+    color: #001f3f;
+}
+
+.contact {
+    margin-left: 15px;
+}
+
+.social-links {
+    margin-left: 10px;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.contact li {
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 10px;
+}
