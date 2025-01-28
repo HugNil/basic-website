@@ -130,8 +130,10 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 300px);
     grid-template-rows: 500px;
-    gap: 50px;
-    padding-bottom: 30px;
+    row-gap: 50px;
+    column-gap: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .book {
@@ -159,11 +161,9 @@ body {
 }
 
 #description {
-    width: 100%;
+    width: 95%;
     height: 105px;
     max-height: 105px;
-    margin-left: 20px;
-    margin-right: 20px;
     margin-top: 5px;
     margin-bottom: 0px;
     font-size: 12px;
@@ -173,10 +173,13 @@ body {
 #price {
     align-content: center;
     position: static;
+    width: 100%;
     margin-top: 0px;
     margin-bottom: 5px;
+    padding-top: 5px;
     font-size: 16px;
     color: #001f3f;
+    border-top: 2px solid #001f3f;
 }
 
 #buy {
