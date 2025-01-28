@@ -8,13 +8,12 @@ body {
 .grid-container {
     display: grid;
     grid-template-areas:
-        "header header"
-        "sidebar main"
-        "footer footer";
-    grid-template-columns: 225px 1fr;
+        "header header header"
+        "sidebar main extra"
+        "footer footer footer";
+    grid-template-columns: 225px 1fr 50px;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
-    border-right: 5px solid #EDE0D4;
 }
 
 /*_____HEADER_____*/
@@ -35,6 +34,7 @@ body {
     justify-content: right;
     width: 100%;
     vertical-align: middle;
+    margin-right: 30px;
 }
 
 .nav ul {
