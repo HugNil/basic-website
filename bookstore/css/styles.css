@@ -92,6 +92,7 @@ body {
 
 .sidebar ul {
     padding-left: 20px;
+    margin-left: 30px;
 }
 
 .sidebar li {
@@ -128,7 +129,7 @@ body {
 
 .book-section {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, minmax(0, 350px));
     grid-template-rows: 500px;
     row-gap: 40px;
     column-gap: 40px;
@@ -142,31 +143,37 @@ body {
     flex-direction: column;
     align-items: center;
     align-content: center;
+    height: 500px;
+    overflow: hidden;
     text-align: center;
     justify-content: space-between;
     border: 2px solid #001f3f;
     border-radius: 5px;
+    padding: 2px;
+    box-sizing: border-box;
 }
 
 .book h3 {
     font-size: 20px;
-    margin-top: 10px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .book img {
     width: 180px;
     height: 280px;
     object-fit: cover;
+    border: 2px solid #001f3f;
+}
+
+#author {
+    font-weight: bold;
+    font-size: 14px;
 }
 
 #description {
     width: 95%;
-    height: 105px;
-    max-height: 105px;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    height: 80px;
+    max-height: 80px;
     font-size: 12px;
     color: #001f3f;
 }
@@ -175,22 +182,21 @@ body {
     align-content: center;
     position: static;
     width: 100%;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    padding-top: 5px;
     font-size: 16px;
     color: #001f3f;
-    border-top: 2px solid #001f3f;
+    font-weight: bold;
 }
 
 #buy {
     position: static;
-    margin-top: 0px;
     margin-bottom: 5px;
-    width: 50px;
-    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     background: #001f3f;
     color: #EDE0D4;
+    border: 1px solid #001f3f;
     border-radius: 5px;
     text-decoration: none;
 }
@@ -198,6 +204,15 @@ body {
 #buy:hover {
     background: #EDE0D4;
     color: #001f3f;
+}
+
+.book h3,
+.book img,
+#author,
+#description,
+#price,
+#buy {
+    margin: 0px;
 }
 
 
@@ -283,6 +298,7 @@ body {
         list-style-type: none;
         margin-inline-start: 10px;
         margin-inline-end: 10px;
+        text-align: center;
     }
 
     .sidebar li {
@@ -303,9 +319,11 @@ body {
         margin-right: 4px;
         border-radius: 5px;
         margin-top: 2px;
+        padding-right: 40px;
     }
 
     .book-section {
         grid-template-columns: repeat(1, 300px);
+        row-gap: 20px;
     }
 }
