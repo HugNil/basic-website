@@ -139,7 +139,8 @@ body {
 }
 
 .book {
-    display: flex;
+    display: none;
+    order: initial;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -213,6 +214,63 @@ body {
 #price,
 #buy {
     margin: 0px;
+}
+
+body:not(:has(:target)) .book {
+    display: flex;
+}
+
+body:not(:has(:target)) h2#label-all {
+    display: flex;
+}
+
+#all:target ~ .maincontent .book {
+    display: flex !important;
+}
+
+#category-psychology:target ~ .maincontent .book:not(.category-psychology) { display: none; }
+#category-computer:target ~ .maincontent .book:not(.category-computer) { display: none; }
+#category-society:target ~ .maincontent .book:not(.category-society) { display: none; }
+#category-economy:target ~ .maincontent .book:not(.category-economy) { display: none; }
+#category-engineering:target ~ .maincontent .book:not(.category-engineering) { display: none; }
+#category-history:target ~ .maincontent .book:not(.category-history) { display: none; }
+#category-philosophy:target ~ .maincontent .book:not(.category-philosophy) { display: none; }
+#category-biographies:target ~ .maincontent .book:not(.category-biographies) { display: none; }
+
+#category-psychology:target ~ .maincontent .book.category-psychology,
+#category-computer:target ~ .maincontent .book.category-computer,
+#category-society:target ~ .maincontent .book.category-society,
+#category-economy:target ~ .maincontent .book.category-economy,
+#category-engineering:target ~ .maincontent .book.category-engineering,
+#category-history:target ~ .maincontent .book.category-history,
+#category-philosophy:target ~ .maincontent .book.category-philosophy,
+#category-biographies:target ~ .maincontent .book.category-biographies {
+    display: flex;
+}
+
+.maincontent h2 {
+    display: none;
+}
+
+#all:target ~ .maincontent #label-all,
+#category-psychology:target ~ .maincontent #label-category-psychology,
+#category-computer:target ~ .maincontent #label-category-computer,
+#category-society:target ~ .maincontent #label-category-society,
+#category-economy:target ~ .maincontent #label-category-economy,
+#category-engineering:target ~ .maincontent #label-category-engineering,
+#category-history:target ~ .maincontent #label-category-history,
+#category-philosophy:target ~ .maincontent #label-category-philosophy,
+#category-biographies:target ~ .maincontent #label-category-biographies {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+.book {
+    order: initial;
 }
 
 
