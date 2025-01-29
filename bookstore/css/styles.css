@@ -247,31 +247,46 @@ body:not(:has(:target)) h2#label-all {
 #category-biographies:target ~ .maincontent .book.category-biographies {
     display: flex;
 }
-
-.maincontent h2 {
+/* Dölj sektionen från början */
+#by-price {
     display: none;
 }
 
-#all:target ~ .maincontent #label-all,
-#category-psychology:target ~ .maincontent #label-category-psychology,
-#category-computer:target ~ .maincontent #label-category-computer,
-#category-society:target ~ .maincontent #label-category-society,
-#category-economy:target ~ .maincontent #label-category-economy,
-#category-engineering:target ~ .maincontent #label-category-engineering,
-#category-history:target ~ .maincontent #label-category-history,
-#category-philosophy:target ~ .maincontent #label-category-philosophy,
-#category-biographies:target ~ .maincontent #label-category-biographies {
-    display: block;
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #001f3f;
+/* Visa by-price om sort-by-price är aktiv */
+#sort-by-price:target ~ .maincontent #by-price {
+    display: grid;
 }
 
-.book {
-    order: initial;
+/* Se till att bara pris-sektionen visas och att kategorifilter inte påverkar den */
+#sort-by-price:target ~ .maincontent .book:not(.price-category) {
+    display: none;
 }
+#sort-by-price:target ~ .maincontent #main-book-section {
+    display: none;
+}
+
+/* Om en kategori är vald, döljer vi pris-sorteringen */
+#category-psychology:target ~ .maincontent #by-price,
+#category-computer:target ~ .maincontent #by-price,
+#category-society:target ~ .maincontent #by-price,
+#category-economy:target ~ .maincontent #by-price,
+#category-engineering:target ~ .maincontent #by-price,
+#category-history:target ~ .maincontent #by-price,
+#category-philosophy:target ~ .maincontent #by-price,
+#category-biographies:target ~ .maincontent #by-price {
+    display: none;
+}
+
+/* Visa böcker i by-price bara om sort-by-price är aktiv */
+#sort-by-price:target ~ .maincontent #by-price .book {
+    display: flex;
+}
+
+#by-price h2 {
+    text-align: center;
+}
+
+
 
 
 
