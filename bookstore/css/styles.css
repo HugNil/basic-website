@@ -11,7 +11,7 @@ body {
         "header header header"
         "sidebar main extra"
         "footer footer footer";
-    grid-template-columns: 250px 1fr 50px;
+    grid-template-columns: 250px auto 50px;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 }
@@ -116,7 +116,7 @@ body {
 
 
 /*_____MAIN_____*/
-.maincontent {
+.maincontent1 {
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -139,7 +139,7 @@ body {
 }
 
 .book {
-    display: none;
+    display: flex;
     order: initial;
     flex-direction: column;
     align-items: center;
@@ -216,77 +216,16 @@ body {
     margin: 0px;
 }
 
-body:not(:has(:target)) .book {
-    display: flex;
+#by-price, #by-author {
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
 }
 
-body:not(:has(:target)) h2#label-all {
-    display: flex;
-}
-
-#all:target ~ .maincontent .book {
-    display: flex !important;
-}
-
-#category-psychology:target ~ .maincontent .book:not(.category-psychology) { display: none; }
-#category-computer:target ~ .maincontent .book:not(.category-computer) { display: none; }
-#category-society:target ~ .maincontent .book:not(.category-society) { display: none; }
-#category-economy:target ~ .maincontent .book:not(.category-economy) { display: none; }
-#category-engineering:target ~ .maincontent .book:not(.category-engineering) { display: none; }
-#category-history:target ~ .maincontent .book:not(.category-history) { display: none; }
-#category-philosophy:target ~ .maincontent .book:not(.category-philosophy) { display: none; }
-#category-biographies:target ~ .maincontent .book:not(.category-biographies) { display: none; }
-
-#category-psychology:target ~ .maincontent .book.category-psychology,
-#category-computer:target ~ .maincontent .book.category-computer,
-#category-society:target ~ .maincontent .book.category-society,
-#category-economy:target ~ .maincontent .book.category-economy,
-#category-engineering:target ~ .maincontent .book.category-engineering,
-#category-history:target ~ .maincontent .book.category-history,
-#category-philosophy:target ~ .maincontent .book.category-philosophy,
-#category-biographies:target ~ .maincontent .book.category-biographies {
-    display: flex;
-}
-/* Dölj sektionen från början */
-#by-price {
-    display: none;
-}
-
-/* Visa by-price om sort-by-price är aktiv */
-#sort-by-price:target ~ .maincontent #by-price {
-    display: grid;
-}
-
-/* Se till att bara pris-sektionen visas och att kategorifilter inte påverkar den */
-#sort-by-price:target ~ .maincontent .book:not(.price-category) {
-    display: none;
-}
-#sort-by-price:target ~ .maincontent #main-book-section {
-    display: none;
-}
-
-/* Om en kategori är vald, döljer vi pris-sorteringen */
-#category-psychology:target ~ .maincontent #by-price,
-#category-computer:target ~ .maincontent #by-price,
-#category-society:target ~ .maincontent #by-price,
-#category-economy:target ~ .maincontent #by-price,
-#category-engineering:target ~ .maincontent #by-price,
-#category-history:target ~ .maincontent #by-price,
-#category-philosophy:target ~ .maincontent #by-price,
-#category-biographies:target ~ .maincontent #by-price {
-    display: none;
-}
-
-/* Visa böcker i by-price bara om sort-by-price är aktiv */
-#sort-by-price:target ~ .maincontent #by-price .book {
-    display: flex;
-}
-
-#by-price h2 {
+#by-price, #by-author, #main-booksection {
     text-align: center;
+    font-size: 1.5em;
 }
-
-
 
 
 
@@ -329,6 +268,123 @@ body:not(:has(:target)) h2#label-all {
 
 
 
+
+
+
+/*_____CART_____*/
+.maincontent2 {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background: #F5F0E6;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.cart-main-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 95%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background: #F5F0E6;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.cart h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 200px 1fr 150px 60px;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: #EDE0D4;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#cart-img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #001f3f;
+}
+
+#img-title {
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-price {
+    grid-column: 4;
+    grid-row: 1;
+    font-size: 1.1em;
+    color: red;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart-quantity {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart-remove {
+    grid-column: 4;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 8px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+
+
+
 /*_____MEDIA_____*/
 @media (max-width: 1024px) {
     .grid-container {
@@ -358,6 +414,15 @@ body:not(:has(:target)) h2#label-all {
         margin-right: 0px;
     }
 
+    .nav ul {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav li {
+        display: list-item;
+    }
+
     .sidebar {
         margin-left: 4px;
         margin-right: 4px;
@@ -383,7 +448,6 @@ body:not(:has(:target)) h2#label-all {
     }
 
     .extra {
-        margin-right: 0px;
         display: none;
     }
 
@@ -392,11 +456,11 @@ body:not(:has(:target)) h2#label-all {
         margin-right: 4px;
         border-radius: 5px;
         margin-top: 2px;
-        padding-right: 40px;
     }
 
     .book-section {
         grid-template-columns: repeat(1, 300px);
         row-gap: 20px;
+        margin-left: 0px;
     }
 }

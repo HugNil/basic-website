@@ -6,170 +6,214 @@
     <title>Boundless Books</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body id="all">
-    <div id="category" class="grid-container">
+<body>
+    <div class="grid-container">
         <header class="header">
             <a href="index.html"><img id="logo" src="img/Boundless Books.png" alt="Boundless Books Logo"></a>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></im></a></li>
-                    <li><a href="#category">Categories <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-category"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h6v6h-6z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6h-6z" /><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /></svg></a></li>
+                    <li><a href="index.html#categories">Categories <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-category"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h6v6h-6z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6h-6z" /><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /></svg></a></li>
                     <li><a href="cart.html">Cart <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></a></li>
                 </ul>
             </nav>
         </header>
 
-        <aside class="sidebar">
+        <aside id="categories" class="sidebar">
             <h2>Categories</h2>
             <ul>
-                <li><a href="#all">All Books</a></li>
-                <li><a href="#category-psychology">Psychology</a></li>
-                <li><a href="#category-computer">Computer & Internet</a></li>
-                <li><a href="#category-society">Society & Politics</a></li>
-                <li><a href="#category-economy">Economy</a></li>
-                <li><a href="#category-engineering">Engineering Science & Technology</a></li>
-                <li><a href="#category-history">History</a></li>
-                <li><a href="#category-philosophy">Philosophy</a></li>
-                <li><a href="#category-biographies">Biographies</a></li>
+                <li><a href="index.html">All Books</a></li>
+                <li><a href="index.html">Psychology</a></li>
+                <li><a href="index.html">Computer & Internet</a></li>
+                <li><a href="index.html">Society & Politics</a></li>
+                <li><a href="index.html">Economy</a></li>
+                <li><a href="index.html">Engineering Science & Technology</a></li>
+                <li><a href="index.html">History</a></li>
+                <li><a href="index.html">Philosophy</a></li>
+                <li><a href="index.html">Biographies</a></li>
                 <br>
-                <li><a href="#sort-by-price">Sort by price</a></li>
-                <li><a href="#sort-by-author">Sort by author</a></li>
+                <li><a href="#by-price">Sort by price</a></li>
+                <li><a href="#by-author">Sort by author</a></li>
             </ul>
             </ul>
         </aside>
 
-        <div id="all"></div>
-        <div id="category-psychology"></div>
-        <div id="category-computer"></div>
-        <div id="category-society"></div>
-        <div id="category-economy"></div>
-        <div id="category-engineering"></div>
-        <div id="category-history"></div>
-        <div id="category-philosophy"></div>
-        <div id="category-biographies"></div>
-        <div id="sort-by-price"></div>
-        <div id="sort-by-author"></div>
-
-        <main id="all" class="maincontent">
-            <section id="main-book-section" class="book-section">
-                <article class="book category-economy">
-                    <h3>Trump: The Art of the Deal</h3>
-                    <p id="author">Donald J. Trump</p>
-                    <p id="description">Here is Trump in action—how he runs his organization and how he runs his life—as he meets the people he needs to meet, chats with family and friends, clashes with enemies, and challenges conventional thinking.</p>
-                    <img class=book-img src="img/trump.jpg" alt="The Psychology of Money">
-                    <p id="price">Price: $50</p>
-                    <a href="cart.html" id="buy">buy</a>
-                </article>
-
-                <article class="book category-computer">
-                    <h3>Artificial Intelligence</h3>
-                    <p id="author">Melanie Metchell</p>
-                    <p id="description">No recent scientific enterprise has been so alluring, terrifying and filled with extravagant promise and frustrating setbacks as artificial intelligence. Writing with clarity and passion, leading AI researcher Melanie Mitchell offers a captivating account of modern-day artificial intelligence.</p>
-                    <img class=book-img src="img/ai.jpg" alt="Artificial Intelligence">
-                    <p id="price">Price: $30</p>
-                    <a href="cart.html" id="buy">buy</a>
-                </article>
-
-                <article class="book category-computer">
-                    <h3>Why Nations Fail</h3>
-                    <p id="author">Daron Acemoglu & James A. Robinson</p>
-                    <p id="description">Why are some nations more prosperous than others? This book sets out to answer this question, with a compelling and elegantly argued new theory: that it is not down to climate, geography or culture, but because of institutions.</p>
-                    <img class=book-img src="img/whynationsfail.jpg" alt="Why Nations Fail">
-                    <p id="price">Price: $60</p>
-                    <a href="cart.html" id="buy">buy</a>
-                </article>
-
-                <article class="book category-psychology">
-                    <h3>The Psychologo of Money</h3>
-                    <p id="author">Morgan Housel</p>
-                    <p id="description">Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics.</p>
-                    <img class=book-img src="img/psychologyOfMoney.jpg" alt="The Psychology of Money">
-                    <p id="price">Price: $20</p>
-                    <a href="cart.html" id="buy">buy</a>
-                </article>
-
-                <article class="book category-engineering">
-                    <h3>Electronic Structure</h3>
-                    <p id="author">Richard M. Martin</p>
-                    <p id="description">The study of electronic structure of materials is at a momentous stage, with new computational methods and advances in basic theory.</p>
-                    <img class=book-img src="img/electronicstructure.jpg" alt="The Psychology of Money">
-                    <p id="price">Price: $40</p>
-                    <a href="cart.html" id="buy">buy</a>
-                </article>
-
-                <article class="book category-computer">
-                    <h3>The Nvidia Way</h3>
-                    <p id="author">Tae Kim</p>
-                    <p id="description">A deeply reported business history of the chip-designer Nvidia―from its founding in 1993 to its recent emergence as one of the most valuable corporations in the world.</p>
-                    <img class=book-img src="img/thenvidiaway.jpg" alt="The Psychology of Money">
-                    <p id="price">Price: $70</p>
-                    <a href="cart.html" id="buy">buy</a>
-                </article>
-            </section>
-
-            <section id="by-price">
-                <h2>Books up to $30</h2>
-                <section class="book-section">
-                    <article class="book category-psychology">
-                        <h3>The Psychologo of Money</h3>
-                        <p id="author">Morgan Housel</p>
-                        <p id="description">Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics.</p>
-                        <img class=book-img src="img/psychologyOfMoney.jpg" alt="The Psychology of Money">
-                        <p id="price">Price: $20</p>
-                        <a href="cart.html" id="buy">buy</a>
-                    </article>
-
-                    <article class="book category-computer">
-                        <h3>Artificial Intelligence</h3>
-                        <p id="author">Melanie Metchell</p>
-                        <p id="description">No recent scientific enterprise has been so alluring, terrifying and filled with extravagant promise and frustrating setbacks as artificial intelligence. Writing with clarity and passion, leading AI researcher Melanie Mitchell offers a captivating account of modern-day artificial intelligence.</p>
-                        <img class=book-img src="img/ai.jpg" alt="Artificial Intelligence">
-                        <p id="price">Price: $30</p>
-                        <a href="cart.html" id="buy">buy</a>
-                    </article>
-                </section>
-    
-                    <h2>Books between $30 - $50</h2>
-                <section class="book-section">
-                    <article class="book category-engineering">
-                        <h3>Electronic Structure</h3>
-                        <p id="author">Richard M. Martin</p>
-                        <p id="description">The study of electronic structure of materials is at a momentous stage, with new computational methods and advances in basic theory.</p>
-                        <img class=book-img src="img/electronicstructure.jpg" alt="The Psychology of Money">
-                        <p id="price">Price: $40</p>
-                        <a href="cart.html" id="buy">buy</a>
-                    </article>
-
-                    <article class="book category-economy">
+        <main class="maincontent1">
+            <section id="main-booksection">
+                <h2>All books</h2>
+                <div class="book-section">
+                    <div class="book">
                         <h3>Trump: The Art of the Deal</h3>
                         <p id="author">Donald J. Trump</p>
                         <p id="description">Here is Trump in action—how he runs his organization and how he runs his life—as he meets the people he needs to meet, chats with family and friends, clashes with enemies, and challenges conventional thinking.</p>
                         <img class=book-img src="img/trump.jpg" alt="The Psychology of Money">
                         <p id="price">Price: $50</p>
                         <a href="cart.html" id="buy">buy</a>
-                    </article>
-                </section>
+                    </div>
     
-                    <h2>Books $50+</h2>
-                <section class="book-section">    
-                    <article class="book category-computer">
+                    <div class="book">
+                        <h3>Artificial Intelligence</h3>
+                        <p id="author">Melanie Metchell</p>
+                        <p id="description">No recent scientific enterprise has been so alluring, terrifying and filled with extravagant promise and frustrating setbacks as artificial intelligence. Writing with clarity and passion, Melanie Mitchell offers a captivating account of modern-day artificial intelligence.</p>
+                        <img class=book-img src="img/ai.jpg" alt="Artificial Intelligence">
+                        <p id="price">Price: $30</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
                         <h3>Why Nations Fail</h3>
                         <p id="author">Daron Acemoglu & James A. Robinson</p>
                         <p id="description">Why are some nations more prosperous than others? This book sets out to answer this question, with a compelling and elegantly argued new theory: that it is not down to climate, geography or culture, but because of institutions.</p>
                         <img class=book-img src="img/whynationsfail.jpg" alt="Why Nations Fail">
                         <p id="price">Price: $60</p>
                         <a href="cart.html" id="buy">buy</a>
-                    </article>
+                    </div>
     
-                    <article class="book category-computer">
+                    <div class="book">
+                        <h3>The Psychologo of Money</h3>
+                        <p id="author">Morgan Housel</p>
+                        <p id="description">Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics.</p>
+                        <img class=book-img src="img/psychologyOfMoney.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $20</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
+                        <h3>Electronic Structure</h3>
+                        <p id="author">Richard M. Martin</p>
+                        <p id="description">The study of electronic structure of materials is at a momentous stage, with new computational methods and advances in basic theory.</p>
+                        <img class=book-img src="img/electronicstructure.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $40</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
                         <h3>The Nvidia Way</h3>
                         <p id="author">Tae Kim</p>
                         <p id="description">A deeply reported business history of the chip-designer Nvidia―from its founding in 1993 to its recent emergence as one of the most valuable corporations in the world.</p>
                         <img class=book-img src="img/thenvidiaway.jpg" alt="The Psychology of Money">
                         <p id="price">Price: $70</p>
                         <a href="cart.html" id="buy">buy</a>
-                    </article>
-                </section>
+                    </div>
+                </div>
+            </section>
+
+            <section id="by-price">
+                <h2>Price | Low - High</h2>
+                <div class="book-section">
+                    <div class="book">
+                        <h3>The Psychologo of Money</h3>
+                        <p id="author">Morgan Housel</p>
+                        <p id="description">Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics.</p>
+                        <img class=book-img src="img/psychologyOfMoney.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $20</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
+                        <h3>Artificial Intelligence</h3>
+                        <p id="author">Melanie Metchell</p>
+                        <p id="description">No recent scientific enterprise has been so alluring, terrifying and filled with extravagant promise and frustrating setbacks as artificial intelligence. Writing with clarity and passion, Melanie Mitchell offers a captivating account of modern-day artificial intelligence.</p>
+                        <img class=book-img src="img/ai.jpg" alt="Artificial Intelligence">
+                        <p id="price">Price: $30</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+        
+                    <div class="book">
+                        <h3>Electronic Structure</h3>
+                        <p id="author">Richard M. Martin</p>
+                        <p id="description">The study of electronic structure of materials is at a momentous stage, with new computational methods and advances in basic theory.</p>
+                        <img class=book-img src="img/electronicstructure.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $40</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
+                        <h3>Trump: The Art of the Deal</h3>
+                        <p id="author">Donald J. Trump</p>
+                        <p id="description">Here is Trump in action—how he runs his organization and how he runs his life—as he meets the people he needs to meet, chats with family and friends, clashes with enemies, and challenges conventional thinking.</p>
+                        <img class=book-img src="img/trump.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $50</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+        
+                    <div class="book">
+                        <h3>Why Nations Fail</h3>
+                        <p id="author">Daron Acemoglu & James A. Robinson</p>
+                        <p id="description">Why are some nations more prosperous than others? This book sets out to answer this question, with a compelling and elegantly argued new theory: that it is not down to climate, geography or culture, but because of institutions.</p>
+                        <img class=book-img src="img/whynationsfail.jpg" alt="Why Nations Fail">
+                        <p id="price">Price: $60</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
+                        <h3>The Nvidia Way</h3>
+                        <p id="author">Tae Kim</p>
+                        <p id="description">A deeply reported business history of the chip-designer Nvidia―from its founding in 1993 to its recent emergence as one of the most valuable corporations in the world.</p>
+                        <img class=book-img src="img/thenvidiaway.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $70</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="by-author">
+                <h2>Author surname | A - Ö</h2>
+                <div class="book-section">
+                    <div class="book">
+                        <h3>Why Nations Fail</h3>
+                        <p id="author">Daron Acemoglu</p>
+                        <p id="description">Why are some nations more prosperous than others? This book sets out to answer this question, with a compelling and elegantly argued new theory: that it is not down to climate, geography or culture, but because of institutions.</p>
+                        <img class=book-img src="img/whynationsfail.jpg" alt="Why Nations Fail">
+                        <p id="price">Price: $60</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+
+                    <div class="book">
+                        <h3>The Psychologo of Money</h3>
+                        <p id="author">Morgan Housel</p>
+                        <p id="description">Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics.</p>
+                        <img class=book-img src="img/psychologyOfMoney.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $20</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+
+                    <div class="book">
+                        <h3>The Nvidia Way</h3>
+                        <p id="author">Tae Kim</p>
+                        <p id="description">A deeply reported business history of the chip-designer Nvidia―from its founding in 1993 to its recent emergence as one of the most valuable corporations in the world.</p>
+                        <img class=book-img src="img/thenvidiaway.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $70</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+
+                    <div class="book">
+                        <h3>Electronic Structure</h3>
+                        <p id="author">Richard M. Martin</p>
+                        <p id="description">The study of electronic structure of materials is at a momentous stage, with new computational methods and advances in basic theory.</p>
+                        <img class=book-img src="img/electronicstructure.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $40</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
+                        <h3>Artificial Intelligence</h3>
+                        <p id="author">Melanie Metchell</p>
+                        <p id="description">No recent scientific enterprise has been so alluring, terrifying and filled with extravagant promise and frustrating setbacks as artificial intelligence. Writing with clarity and passion, Melanie Mitchell offers a captivating account of modern-day artificial intelligence.</p>
+                        <img class=book-img src="img/ai.jpg" alt="Artificial Intelligence">
+                        <p id="price">Price: $30</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+    
+                    <div class="book">
+                        <h3>Trump: The Art of the Deal</h3>
+                        <p id="author">Donald J. Trump</p>
+                        <p id="description">Here is Trump in action—how he runs his organization and how he runs his life—as he meets the people he needs to meet, chats with family and friends, clashes with enemies, and challenges conventional thinking.</p>
+                        <img class=book-img src="img/trump.jpg" alt="The Psychology of Money">
+                        <p id="price">Price: $50</p>
+                        <a href="cart.html" id="buy">buy</a>
+                    </div>
+                </div>
             </section>
         </main>
         <aside class="extra"></aside>
