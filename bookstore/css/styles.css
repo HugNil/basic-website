@@ -315,18 +315,19 @@ body {
 
 .cart-item {
     display: grid;
-    grid-template-columns: 200px 1fr 150px 60px;
+    grid-template-areas: 
+        "main-description remove-button";
+    grid-template-columns: 1fr 100px;
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 5px;
     padding: 10px;
     background-color: #EDE0D4;
     border-radius: 5px;
-    padding: 20px;
+    border: 1px;
+    padding: 10px;
 }
 
 #cart-img {
-    grid-column: 1;
-    grid-row: 1;
     width: 100px;
     height: 150px;
     object-fit: cover;
@@ -334,18 +335,18 @@ body {
 }
 
 #img-title {
-    grid-column: 2;
-    grid-row: 1;
     font-weight: bold;
     font-size: 1.1em;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center;  /* Centrerar texten vertikalt */
+    flex-grow: 1; /* Tillåt titeln att växa och ta upp utrymme */
+    overflow: hidden;     /* Dölj överflödig text om den är för lång */
+    text-overflow: ellipsis; /* Lägg till "..." om texten är för lång */
+    max-width: 30%;
+    margin-left: 20px;
 }
 
 #cart-price {
-    grid-column: 4;
-    grid-row: 1;
     font-size: 1.1em;
     color: red;
     font-weight: bold;
@@ -355,16 +356,14 @@ body {
 }
 
 #cart-quantity {
-    grid-column: 3;
-    grid-row: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 #cart-remove {
-    grid-column: 4;
-    grid-row: 3;
+    grid-area: remove-button;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,11 +374,31 @@ button {
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    margin: 8px;
 }
 
 button:hover {
     background-color: #ddd;
+}
+
+.box-remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-price-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    gap: 5px;
+}
+
+.main-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
 }
 
 
@@ -462,5 +481,35 @@ button:hover {
         grid-template-columns: repeat(1, 300px);
         row-gap: 20px;
         margin-left: 0px;
+    }
+
+    #cart-img {
+        width: 60px;
+        height: 90px;
+    }
+
+    .cart-item {
+        grid-template-columns: auto 30px;
+    }
+
+    .box-price-quantity {
+        width: 5%;
+    }
+
+    #img-title {
+        max-width: 35%;
+        margin-left: 5px;
+    }
+
+    .main-description {
+        gap: 5px;
+    }
+
+    .box-remove {
+        margin-right: 10px;
+    }
+
+    .box-price-quantity {
+        gap: 0px;
     }
 }
