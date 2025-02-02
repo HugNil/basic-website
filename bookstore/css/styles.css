@@ -423,23 +423,15 @@ button:hover {
     }
 
     .header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
+        padding-right: 0px;
     }
 
-    .nav {
-        justify-content: center;
-        margin-right: 0px;
-    }
-
-    .nav ul {
-        justify-content: center;
-        text-align: center;
-    }
 
     .nav li {
-        display: list-item;
+        margin-top: 0px;
     }
 
     .sidebar {
@@ -511,5 +503,9 @@ button:hover {
 
     .box-price-quantity {
         gap: 0px;
+    }
+
+    #menu-text {
+        display: none;
     }
 }
