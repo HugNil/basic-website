@@ -6,71 +6,78 @@
     <title>Cart</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div class="cart-main-container">
-        <header class="header">
-            <a href="index.html"><img id="logo" src="img/Boundless Books.png" alt="Boundless Books Logo"></a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html"><span id="menu-text">Home </span><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></im></a></li>
-                    <li><a href="index.html#categories"><span id="menu-text">Categories </span><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-category"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h6v6h-6z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6h-6z" /><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /></svg></a></li>
-                    <li><a href="cart.html"><span id="menu-text">Cart </span><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="maincontent2">
-            <section class="cart">
-                <h1>Your static cart</h1>
-    
-                <div class="cart-item">
-                    <div class="main-description">
-                        <img id="cart-img" src="img/thenvidiaway.jpg" alt="Bokbild">
-                        <div id="img-title">
-                            <span>The Nvidia Way</span>
-                        </div>
-                        <div class="box-price-quantity">
-                            <div id="cart-quantity">
-                                <button>-</button>
-                                <span id="quantity">1</span>
-                                <button>+</button>
-                            </div>
-                            <div id="cart-price">70$</div>
-                        </div>
-                    </div>
-                    <div class="box-remove"><button>Ta bort</button></div>
-                </div>
+<body class="cart-main-container">
+    <header class="header">
+        <a href="index.html"><img id="logo" src="img/Boundless Books.png" alt="Boundless Books Logo"></a>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html"><span id="menu-text">Home </span><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></im></a></li>
+                <li><a href="index.html#categories"><span id="menu-text">Categories </span><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-category"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h6v6h-6z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6h-6z" /><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /></svg></a></li>
+                <li><a href="cart.html"><span id="menu-text">Cart </span><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="maincontent2">
+        <section class="cart">
+            <h1>Your static cart</h1>
 
-                <div class="cart-item">
-                    <div class="main-description">
-                        <img id="cart-img" src="img/electronicstructure.jpg" alt="Bokbild">
-                        <div id="img-title">
-                            <span>Electronic Structure</span>
-                        </div>
-                        <div class="box-price-quantity">
-                            <div id="cart-quantity">
-                                <button>-</button>
-                                <span id="quantity">1</span>
-                                <button>+</button>
-                            </div>
-                            <div id="cart-price">40$</div>
-                        </div>
-                    </div>
-                    <div class="box-remove"><button>Ta bort</button></div>
-                </div>
-            </section>
-            <div class="total-price"><p>Total Price: <span>110$</span></p></div>
-        </main>
+            <article class="cart-item">
+                <section class="main-description">
+                    <img id="cart-img" src="img/thenvidiaway.jpg" alt="Frontcover for the book The Nvidia Way">
+                    
+                    <section id="img-title">
+                        <span>The Nvidia Way</span>
+                    </section>
+            
+                    <section class="box-price-quantity">
+                        <section id="cart-quantity">
+                            <button aria-label="Minska kvantitet">-</button>
+                            <span id="quantity">1</span>
+                            <button aria-label="Öka kvantitet">+</button>
+                        </section>
+                        
+                        <div id="cart-price">70$</div>
+                    </section>
+                </section>
+                <section class="box-remove">
+                    <button aria-label="Ta bort boken från varukorgen">Ta bort</button>
+                </section>
+            </article>
 
-        <footer class="footer">
-            <p>Creted by Hugo, &copy; 2025 Boundless Books</p>
-            <contact class="contact">
-                <ul>
-                    <li><a href="mailto: hugo.nilsson0002@gmail.com"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#EDE0D4"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg></a></li>
-                    <li><a href="https://github.com/HugNil" target="_blank"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#EDE0D4"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg></a></li>
-                </ul>
-            </contact>
-        </footer>
-    </div>
-    
+            <article class="cart-item">
+                <section class="main-description">
+                    <img id="cart-img" src="img/electronicstructure.jpg" alt="Frontcover for the book Electronic Structure">
+                    
+                    <section id="img-title">
+                        <span>Electronic Structure</span>
+                    </section>
+            
+                    <section class="box-price-quantity">
+                        <section id="cart-quantity">
+                            <button aria-label="Minska kvantitet">-</button>
+                            <span id="quantity">1</span>
+                            <button aria-label="Öka kvantitet">+</button>
+                        </section>
+                        
+                        <div id="cart-price">40$</div>
+                    </section>
+                </section>
+                <section class="box-remove">
+                    <button aria-label="Ta bort boken från varukorgen">Ta bort</button>
+                </section>
+            </article>
+        </section>
+        <div class="total-price"><p>Total Price: <span>110$</span></p></div>
+    </main>
+
+    <footer class="footer">
+        <p>Creted by Hugo, &copy; 2025 Boundless Books</p>
+        <contact class="contact">
+            <ul>
+                <li><a href="mailto: hugo.nilsson0002@gmail.com"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#EDE0D4"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg></a></li>
+                <li><a href="https://github.com/HugNil" target="_blank"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#EDE0D4"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg></a></li>
+            </ul>
+        </contact>
+    </footer>
 </body>
 </html>
