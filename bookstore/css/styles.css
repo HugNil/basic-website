@@ -188,22 +188,42 @@ body {
     color: #001f3f;
 }
 
+.book-price-buy {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .price {
-    font-size: 16px;
+    font-size: 18px;
     color: #001f3f;
     font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+
+.price mark {
+    background-color: #001f3f;
+    color: #EDE0D4;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .buy {
-    padding: 3px 8px;
+    padding: 5px 10px;
     font-size: 18px;
     background: #001f3f;
     color: #EDE0D4;
     border: 1px solid #001f3f;
     border-radius: 5px;
     text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
 }
 
 .buy:hover {
@@ -211,13 +231,6 @@ body {
     color: #001f3f;
 }
 
-.book-price-buy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 25px;
-}
 
 .book h3,
 .book img,
@@ -276,9 +289,6 @@ body {
     margin-top: 12px;
     margin-left: 10px;
 }
-
-
-
 
 
 
@@ -389,6 +399,7 @@ button {
 
 button:hover {
     background-color: #ddd;
+    transition: background-color 0,3s ease;
 }
 
 .box-remove {
